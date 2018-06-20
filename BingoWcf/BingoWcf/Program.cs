@@ -16,8 +16,7 @@ namespace BingoWcf
             BingoWcf.Dominio.Especificaciones.RealiceVerificarCarton rv = new BingoWcf.Dominio.Especificaciones.RealiceVerificarCarton();
             BingoWcf.Dominio.Especificaciones.RealiceSortearNumeros rn = new BingoWcf.Dominio.Especificaciones.RealiceSortearNumeros();
             BingoWcf.Dominio.Acciones.CrearCarton c = new BingoWcf.Dominio.Acciones.CrearCarton();
-            BingoWcf.Dominio.Acciones.CantidadCartones cant = new BingoWcf.Dominio.Acciones.CantidadCartones();
-            List<int[,]> cartonesCreados = new List<int[,]>();
+                        List<int[,]> cartonesCreados = new List<int[,]>();
             List<int> listaNumerosSorteados = new List<int>();
             int[,] carton = new int[5, 5];
             int[,] juegoSeleccionado = new int[5, 5];
@@ -34,7 +33,7 @@ namespace BingoWcf
             cantidadCartones = Convert.ToInt16(Console.ReadLine());
             Console.WriteLine("Creando cartones de bingo!!!");
             Console.WriteLine("------------------------------");
-            cartonesCreados = cant.cantidadCartones(cantidadCartones);
+            cartonesCreados = rc.RealizarMatriz(cantidadCartones);
             Console.WriteLine("Seleccione el tipo de juego:\n"
                                 + "1.Primera fila.\n"
                                 + "2.Cuatro esquinas.\n"

@@ -12,6 +12,17 @@ namespace LabBingoWcf
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        public List<int[,]> creacionCartones(int cantidadCartones)
+        {
+            var laEspecificacion = new BingoWcf.Dominio.Especificaciones.RealiceMatriz();
+            List<int[,]> elResultado = laEspecificacion.RealizarMatriz(cantidadCartones);
+            return elResultado;
+        }
+
+       
+
+
+
         public string GetData(int value)
         {
             return string.Format("You entered: {0}", value);

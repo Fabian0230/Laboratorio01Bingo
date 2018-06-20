@@ -61,5 +61,8 @@
   <ItemGroup>
     <Folder Include="Dominio\Repositorio\" />
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,13 +8,13 @@ namespace BingoWcf.Dominio.Acciones
 {
     public class CantidadCartones
     {
-        Especificaciones.RealiceMatriz rm = new Especificaciones.RealiceMatriz();
+        CrearCarton rm = new CrearCarton();
         public List<int[,]> cantidadCartones(int cantidad)
         {
             List<int[,]> cartones = new List<int[,]>();
             for (int i = 0; i < cantidad; i++)
             {
-                cartones.Add(rm.RealizarMatriz());
+                cartones.Add(rm.CrearMatrizCarton());
             }
             return cartones;
         }

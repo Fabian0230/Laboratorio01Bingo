@@ -22,16 +22,10 @@ namespace Bingo.Tests
             int realResult;
             List<int[,]> cartonesResult = new List<int[,]>();
             List<int[,]> cartonesExpected = new List<int[,]>();
-            cartonesExpected.Add(elServicio.CrearMatrizCarton());
-            cartonesExpected.Add(elServicio.CrearMatrizCarton());
-            cartonesExpected.Add(elServicio.CrearMatrizCarton());
-            cartonesExpected.Add(elServicio.CrearMatrizCarton());
-            cartonesExpected.Add(elServicio.CrearMatrizCarton());
-            cartonesExpected.Add(elServicio.CrearMatrizCarton());
-            cartonesExpected.Add(elServicio.CrearMatrizCarton());
-            cartonesExpected.Add(elServicio.CrearMatrizCarton());
-            cartonesExpected.Add(elServicio.CrearMatrizCarton());
-            cartonesExpected.Add(elServicio.CrearMatrizCarton());
+            for(int i = 0; i < 10; i++)
+            {
+                cartonesExpected.Add(elServicio.CrearMatrizCarton());
+            }
             expectedResult = cartonesExpected.Count;
             // invoca al método
             cartonesResult = elServicio2.cantidadCartones(num);

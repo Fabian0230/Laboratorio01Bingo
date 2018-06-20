@@ -8,11 +8,11 @@ namespace BingoWcf.Dominio.Especificaciones
 {
     public class RealiceMatriz
     {
-        public int[,] RealizarMatriz()
+        public List<int[,]> RealizarMatriz(int cantidadCartones)
         {
-            int[,] laMatriz;
-            var laAccion = new Acciones.CrearCarton();
-            laMatriz = laAccion.CrearMatrizCarton();
+            List<int[,]> laMatriz;
+            var laAccion = new Acciones.CantidadCartones();
+            laMatriz = laAccion.cantidadCartones(cantidadCartones);
             return laMatriz;
         }
     }

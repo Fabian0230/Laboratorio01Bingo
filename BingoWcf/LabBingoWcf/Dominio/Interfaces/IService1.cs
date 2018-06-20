@@ -12,6 +12,8 @@ namespace LabBingoWcf
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        List<int[,]> creacionCartones(int cantidadCartones);
 
         [OperationContract]
         string GetData(int value);
